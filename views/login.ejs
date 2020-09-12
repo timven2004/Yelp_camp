@@ -1,14 +1,20 @@
 <%- include ("./partials/header") %>
 
-<h1>
-	Login !
-</h1>
 
-<form action="/login" method="post">
-	<input type="text" name="username" placeholder="username">
-	<input type="password" name="password" placeholder="password">
-	<input type="submit" value="Login!">
+<div class = "container">
+<div class="jumbotron jumbotron-fluid" id="Login">
+  <div class="container">
+    <h1 class="display-4">Login</h1>
+    <p class="lead">Login to create/edit campgrounds and comments!</p>
+  </div>
+</div>
+	<form action="/login" method="post">
+	<input type="text" name="username" placeholder="username" class="d-block my-2">
+	<input type="password" name="password" placeholder="password" class="d-block my-2">
+	<input class="btn btn-primary "type="submit" value="Login!">
 </form>
+</div>
+
 
 
 <%- include ("./partials/footer") %>

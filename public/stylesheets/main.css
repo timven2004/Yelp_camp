@@ -9,3 +9,14 @@
 .caption-full {
 	padding:9px;
 }
+
+#Login {
+	background-color: rgb(255, 204, 64);
+
+}
+
+#SignUp{
+	background-color: steelblue;
+	color: white;
+	
+}
