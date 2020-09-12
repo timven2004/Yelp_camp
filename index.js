@@ -19,7 +19,10 @@ var port = process.env.PORT || 3000;
 app.use(methodOverride("_method"));
 app.use(flash());
 
-mongoose.connect("mongodb+srv://Yelp_camp:rusty@yelpcamp.rhmhx.mongodb.net/yelpcamp?retryWrites=true&w=majority",{useNewUrlParser: true});
+mongoose.connect(process.env.DATABASEURL,{useNewUrlParser: true});
+// mongoose.connect("mongodb+srv://Yelp_camp:rusty@yelpcamp.rhmhx.mongodb.net/yelpcamp?retryWrites=true&w=majority",{useNewUrlParser: true});
+//mongoose.connect(mongodb://localhost/yelp_camp);
+console.log("DATABASEURL = " +  process.env.DATABASEURL);
 
 // Campground.create(
 // 	{name: "Salmon Creek", image:"https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&h=350"}, function(err, campground){
