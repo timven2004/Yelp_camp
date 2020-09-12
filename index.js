@@ -14,12 +14,12 @@ var authRoutes = require("./routes/auth")
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
 var port = process.env.PORT || 3000;
-
+var url = process.env.DATABASEURL||"mongodb+srv://Yelp_camp:rusty@yelpcamp.rhmhx.mongodb.net/yelpcamp?retryWrites=true&w=majority";
 
 app.use(methodOverride("_method"));
 app.use(flash());
 
-mongoose.connect(process.env.DATABASEURL,{useNewUrlParser: true});
+mongoose.connect(url,{useNewUrlParser: true});
 // mongoose.connect("mongodb+srv://Yelp_camp:rusty@yelpcamp.rhmhx.mongodb.net/yelpcamp?retryWrites=true&w=majority",{useNewUrlParser: true});
 //mongoose.connect(mongodb://localhost/yelp_camp);
 console.log("DATABASEURL = " +  process.env.DATABASEURL);
